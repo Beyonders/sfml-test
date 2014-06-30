@@ -4,6 +4,8 @@
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <atlstr.h>
+#include <atlconv.h>
 
 sf::CircleShape shape(100.f);
 sf::Texture texture;
@@ -14,32 +16,39 @@ sf::Font font;
 sf::Text text;
 sf::Shader shader;
 
-//const std::string fragmentShader = \
+const std::string fragmentShader = \
 	"uniform sampler2D texture;" \
+	"uniform vec3 ReplaceColor1;" \
+	"uniform vec3 ReplaceColor2;" \
+	"uniform vec3 ReplaceColor3;" \
+	"uniform vec3 EmpireColor;" \
 	"void main(void)" \
 	"{" \
-	"	vec4 pixel = gl_Color;" \
-	"	if (pixel.r != pixel.g)" \
+	"	vec4 pixel = texture2D(texture, gl_TexCoord[0].xy);" \
+	"	vec3 eps = vec3(0.009, 0.009, 0.009);" \
+	"	if (all(greaterThanEqual(pixel, vec4(ReplaceColor1 - eps, 1.0))) && all(lessThanEqual(pixel, vec4(ReplaceColor1 + eps, 1.0))))" \
 	"	{" \
-	"		pixel.r = 40" \
-	"		pixel.g = 200" \
-	"		pixel.b = 150" \
+	"		pixel = vec4(EmpireColor, 1.0);" \
+	"	}" \
+	"	if (all(greaterThanEqual(pixel, vec4(ReplaceColor2 - eps, 1.0))) && all(lessThanEqual(pixel, vec4(ReplaceColor2 + eps, 1.0))))" \
+	"	{" \
+	"		pixel = vec4(EmpireColor * 0.8, 1.0);" \
+	"	}" \
+	"	if (all(greaterThanEqual(pixel, vec4(ReplaceColor3 - eps, 1.0))) && all(lessThanEqual(pixel, vec4(ReplaceColor3 + eps, 1.0))))" \
+	"	{" \
+	"		pixel = vec4(EmpireColor * 0.55, 1.0);" \
 	"	}" \
 	"	gl_FragColor = pixel;" \
 	"}";
 
-const std::string fragmentShader = \
-	"uniform sampler2D texture;" \
-	"void main(void)" \
-	"{" \
-	"	vec4 pixel = gl_Color;" \
-	"		pixel.r = 40" \
-	"		pixel.g = 200" \
-	"		pixel.b = 150" \
-	"	gl_FragColor = pixel;" \
-	"}";
-
 void UpdateGame(sf::Time* elapsed, sf::RenderWindow* window);
+
+std::string ExePath()
+{
+	LPWSTR buffer = L"";
+	GetModuleFileName(NULL, buffer, _MAX_PATH);
+	return CW2A(buffer);
+}
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -69,6 +78,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 	text.setFont(font);
+	//std::string path = ExePath();
 	text.setString("Version 0.59");
 	text.setCharacterSize(14);
 	text.setColor(sf::Color::Yellow);
@@ -83,6 +93,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		//return 3;
 	}
+	shader.setParameter("ReplaceColor1", 1.f, (165.0f/255.0f), (99.0f/255.0f));
+	shader.setParameter("ReplaceColor2", (244.0f/255.0f), (74.0f/255.0f), (52.0f/255.0f));
+	shader.setParameter("ReplaceColor3", (181.0f/255.0f), (13.0f/255.0f), (13.0f/255.0f));
+	shader.setParameter("EmpireColor", 0.f, 0.f, 1.f);
 
 	sf::Clock clock;
 
