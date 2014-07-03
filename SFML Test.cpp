@@ -1,11 +1,14 @@
 // SFML Test.cpp : Defines the entry point for the console application.
 //
 
+#ifdef _WIN32
 #include "stdafx.h"
+#endif
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <atlstr.h>
-#include <atlconv.h>
+//#include <atlstr.h>
+//#include <atlconv.h>
 
 sf::CircleShape shape(100.f);
 sf::Texture texture;
@@ -43,19 +46,21 @@ const std::string fragmentShader = \
 
 void UpdateGame(sf::Time* elapsed, sf::RenderWindow* window);
 
+/*
 std::string ExePath()
 {
 	LPWSTR buffer = L"";
 	GetModuleFileName(NULL, buffer, _MAX_PATH);
 	return CW2A(buffer);
 }
+*/
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Test");
-	
+
 	shape.setFillColor(sf::Color::Green);
-	if (!texture.loadFromFile("C:\\temp\\SFML Test\\x64\\Debug\\humans.png"))
+	if (!texture.loadFromFile("humans.png"))
 	{
 		return 1;
 	}
@@ -72,7 +77,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	shipSprite.setTextureRect(sf::IntRect(0, 320, 160, 160));
 	shipSprite.setPosition(400, 10);
 
-	if (!font.loadFromFile("C:\\temp\\SFML Test\\x64\\Debug\\JLSSpaceGothicR.ttf"))
+	if (!font.loadFromFile("JLSSpaceGothicR.ttf"))
 	{
 		return 1;
 	}
@@ -187,7 +192,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				} break;
 			default:
 				break;
-			}			
+			}
 		}
 
 		sf::Time elapsed = clock.restart();
