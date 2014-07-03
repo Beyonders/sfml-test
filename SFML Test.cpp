@@ -1,9 +1,8 @@
 // SFML Test.cpp : Defines the entry point for the console application.
 //
 
-#ifdef _WIN32
+
 #include "stdafx.h"
-#endif
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
