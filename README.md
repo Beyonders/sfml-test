@@ -23,6 +23,7 @@ Example:
  - Windows XP + Visual Studio Express 2008
  - working directory C:\work
 
+Steps:
 - download project ( C:\work\sfml-test )
 - Install CMake
 - Download SFML 2.1 for Visual Studio 2008 ( C:\work\SFML-2.1 )
