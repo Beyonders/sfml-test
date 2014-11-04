@@ -58,6 +58,8 @@ int main(int argc, char* argv[])
 {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Test");
 
+	GameMain gameMain = GameMain(800, 600);
+
 	shape.setFillColor(sf::Color::Green);
 	if (!texture.loadFromFile("humans.png"))
 	{
