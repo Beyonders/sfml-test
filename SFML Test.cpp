@@ -58,10 +58,15 @@ int main(int argc, char* argv[])
 {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Test");
 
+	if (!Initialize("sprites.txt"))
+	{
+		//Couldn't load sprites, close
+		return -1;
+	}
 	GameMain gameMain = GameMain(800, 600);
 
 	shape.setFillColor(sf::Color::Green);
-	if (!texture.loadFromFile("humans.png"))
+	if (!texture.loadFromFile("graphics\\humans.png"))
 	{
 		return 1;
 	}

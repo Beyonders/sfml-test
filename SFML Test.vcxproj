@@ -157,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\GameMain.cpp" />
+    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\SpriteManager.cpp" />
     <ClCompile Include="SFML Test.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -1,15 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include <map>
 
-static class SpriteManager
-{
-private:
-	bool _initalized;
+extern bool _initialized;
 
-public:
-	std::map<char[16],sf::Sprite> Sprites;
+extern std::map<std::string, sf::Sprite> ParentSprites; //To reduce the memory usage
+extern std::map<std::string, sf::Sprite> Sprites;
 
-	SpriteManager(char* path);
-
-	sf::Sprite GetSprite(char[16] name);
-};
+bool Initialize(std::string path);
+sf::Sprite GetSprite(std::string name);
