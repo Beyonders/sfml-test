@@ -3,12 +3,30 @@
 
 #include "stdafx.h"
 
-enum class PLANET_TYPE { TERRAN = 0, JUNGLE, OCEAN, BADLAND, STEPPE, DESERT, ARCTIC, BARREN, TUNDRA, DEAD, VOLCANIC, TOXIC, RADIATED, NONE };
-enum class OUTPUT_TYPE { RESEARCH, DEFENSE, INFRASTRUCTURE, ENVIRONMENT, CONSTRUCTION };
-enum class PLANET_CONSTRUCTION_BONUS { ULTRAPOOR, POOR, AVERAGE, RICH, ULTRARICH };
-enum class PLANET_ENVIRONMENT_BONUS { HOSTILE, AVERAGE, FERTILE, GAIA };
-enum class PLANET_RESEARCH_BONUS { AVERAGE, ARTIFACTS, BEYAAN };
-enum class PLANET_ASTEROID_DENSITY { NONE, LOW, HIGH };
+struct PlanetType
+{
+	enum Type { TERRAN = 0, JUNGLE, OCEAN, BADLAND, STEPPE, DESERT, ARCTIC, BARREN, TUNDRA, DEAD, VOLCANIC, TOXIC, RADIATED, NONE };
+};
+struct OutputType
+{
+	enum Type { RESEARCH, DEFENSE, INFRASTRUCTURE, ENVIRONMENT, CONSTRUCTION };
+};
+struct PlanetConstructionBonus
+{
+	enum Type { ULTRAPOOR, POOR, AVERAGE, RICH, ULTRARICH };
+};
+struct PlanetEnvironmentBonus
+{
+	enum Type { HOSTILE, AVERAGE, FERTILE, GAIA };
+};
+struct PlanetResearchBonus
+{
+	enum Type { AVERAGE, ARTIFACTS, BEYAAN };
+};
+struct PlanetAsteroidDensity
+{
+	enum Type { NONE, LOW, HIGH };
+};
 
 using namespace std;
 
@@ -34,7 +52,7 @@ private:
 	static const string TERRAN;
 
 	StarSystem *whichSystem;
-	PLANET_TYPE planetType;
+	PlanetType::Type planetType;
 	string planetTypeString;
 	Empire *owner;
 	string name;

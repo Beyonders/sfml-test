@@ -149,15 +149,26 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Empire.h" />
+    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Equipment.h" />
     <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\GameMain.h" />
     <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\InterfaceModules.h" />
+    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Planet.h" />
+    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Race.h" />
     <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\SpriteManager.h" />
+    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\StarSystem.h" />
+    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Technology.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Empire.cpp" />
+    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Equipment.cpp" />
     <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\GameMain.cpp" />
+    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Planet.cpp" />
+    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Race.cpp" />
     <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\SpriteManager.cpp" />
+    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\StarSystem.cpp" />
     <ClCompile Include="SFML Test.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

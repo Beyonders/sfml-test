@@ -15,6 +15,8 @@
 
 // TODO: reference additional headers your program requires here
 #include "SpriteManager.h"
+#include "Technology.h"
+#include "Equipment.h"
 #include "Race.h"
 #include "Planet.h"
 #include "StarSystem.h"

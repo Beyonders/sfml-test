@@ -1,4 +1,4 @@
-#include "Equipment.h"
+#include "stdafx.h"
 
 //This stores whether or not the secondary technology item is used, as well as store other useful data for use in space combat
 Equipment::Equipment(Technology* whichTech, bool useSecondary)

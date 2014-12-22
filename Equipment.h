@@ -1,9 +1,9 @@
 #ifndef EQUIPMENT_H
 #define EQUIPMENT_H
 
+#include "stdafx.h"
 #include <map>
 #include <string>
-#include "Technology.h"
 
 using namespace std;
 
