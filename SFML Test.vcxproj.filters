@@ -24,31 +24,31 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\GameMain.h">
+    <ClInclude Include="Empire.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\InterfaceModules.h">
+    <ClInclude Include="Equipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\SpriteManager.h">
+    <ClInclude Include="GameMain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Planet.h">
+    <ClInclude Include="InterfaceModules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\StarSystem.h">
+    <ClInclude Include="Planet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Empire.h">
+    <ClInclude Include="Race.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Race.h">
+    <ClInclude Include="SpriteManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Equipment.h">
+    <ClInclude Include="StarSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Technology.h">
+    <ClInclude Include="Technology.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,25 +59,25 @@
     <ClCompile Include="SFML Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\GameMain.cpp">
+    <ClCompile Include="Empire.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\SpriteManager.cpp">
+    <ClCompile Include="Equipment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Planet.cpp">
+    <ClCompile Include="GameMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\StarSystem.cpp">
+    <ClCompile Include="Planet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Empire.cpp">
+    <ClCompile Include="Race.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Race.cpp">
+    <ClCompile Include="SpriteManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Equipment.cpp">
+    <ClCompile Include="StarSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

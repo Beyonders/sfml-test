@@ -27,7 +27,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -68,6 +68,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Programiranje\Cpp\Libraries\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Programiranje\Cpp\Libraries\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -92,7 +94,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\SFML-2.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <TargetMachine>MachineX64</TargetMachine>
+      <TargetMachine>NotSet</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -149,26 +151,26 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Empire.h" />
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Equipment.h" />
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\GameMain.h" />
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\InterfaceModules.h" />
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Planet.h" />
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Race.h" />
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\SpriteManager.h" />
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\StarSystem.h" />
-    <ClInclude Include="..\..\Brent%27s Stuff\sfml-test\Technology.h" />
+    <ClInclude Include="Empire.h" />
+    <ClInclude Include="Equipment.h" />
+    <ClInclude Include="GameMain.h" />
+    <ClInclude Include="InterfaceModules.h" />
+    <ClInclude Include="Planet.h" />
+    <ClInclude Include="Race.h" />
+    <ClInclude Include="SpriteManager.h" />
+    <ClInclude Include="StarSystem.h" />
+    <ClInclude Include="Technology.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Empire.cpp" />
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Equipment.cpp" />
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\GameMain.cpp" />
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Planet.cpp" />
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\Race.cpp" />
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\SpriteManager.cpp" />
-    <ClCompile Include="..\..\Brent%27s Stuff\sfml-test\StarSystem.cpp" />
+    <ClCompile Include="Empire.cpp" />
+    <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="Planet.cpp" />
+    <ClCompile Include="Race.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
+    <ClCompile Include="StarSystem.cpp" />
     <ClCompile Include="SFML Test.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

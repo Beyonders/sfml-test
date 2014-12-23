@@ -49,7 +49,7 @@ void BBSprite::Update(float time)
 	{
 		//Advance to next frame
 		_currentFrame++;
-		if (_currentFrame >= _baseSprite.Frames.size())
+		if (_currentFrame >= (int)_baseSprite.Frames.size())
 		{
 			_currentFrame = 0;
 		}

@@ -26,7 +26,7 @@ string Equipment::getEquipmentName()
 		this->technology->getTechName();
 }
 
-float Equipment::getCost(const map<TechField::Type, int>& techLevels, int shipSize)
+float Equipment::getCost(map<TechField::Type, int>& techLevels, int shipSize)
 {
 	float initialCost = 0;
 	if (this->technology->getGenericCost() == 0) //It uses the ship-specific size cost
@@ -83,13 +83,13 @@ float Equipment::getCost(const map<TechField::Type, int>& techLevels, int shipSi
 	return initialCost * (powf(0.5f, (levelDifference / 10.0f)));
 }
 
-float Equipment::getActualCost(const map<TechField::Type, int>& techLevels, int shipSize, float costPerPower)
+float Equipment::getActualCost( map<TechField::Type, int>& techLevels, int shipSize, float costPerPower)
 {
 	float cost = this->getCost(techLevels, shipSize);
 	return (cost + this->getPower(shipSize) * costPerPower);
 }
 
-float Equipment::getSize(const map<TechField::Type, int>& techLevels, int shipSize)
+float Equipment::getSize( map<TechField::Type, int>& techLevels, int shipSize)
 {
 	float initialSize = 0;
 	if (this->technology->getGenericSize() == 0) //It uses the ship-specific size cost
@@ -151,7 +151,7 @@ float Equipment::getSize(const map<TechField::Type, int>& techLevels, int shipSi
 	return initialSize * (powf(0.75f, (levelDifference / 10.0f)));
 }
 
-float Equipment::getActualSize(const map<TechField::Type, int>& techLevels, int shipSize, float spacePerPower)
+float Equipment::getActualSize( map<TechField::Type, int>& techLevels, int shipSize, float spacePerPower)
 {
 	float size = this->getSize(techLevels, shipSize);
 	return (size + this->getPower(shipSize) * spacePerPower);
@@ -210,7 +210,8 @@ int Equipment::getRange()
 {
 	if (this->technology->getWeaponType() == Technology::MISSILE_WEAPON)
 	{
-		return (int)(this->useSecondary ? ((this->technology->getWeaponRange() + 0.1f) * 2) : (this->technology->getWeaponRange() + 1.1f) * 2); //.1f is to compenstate for any float rounding error
+		//.1f is to compenstate for any float rounding error
+		return (int)(this->useSecondary ? ((this->technology->getWeaponRange() + 0.1f) * 2) : (this->technology->getWeaponRange() + 1.1f) * 2);
 	}
-	return this->useSecondary ? this->technology->getSecondaryWeaponRange() : this->technology->getWeaponRange();
+	return (int)(this->useSecondary ? this->technology->getSecondaryWeaponRange() : this->technology->getWeaponRange());
 }

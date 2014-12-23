@@ -22,10 +22,10 @@ public:
 	
 	string getDisplayName();
 	string getEquipmentName();
-	float getCost(const map<TechField::Type, int>& techLevels, int shipSize);
-	float getActualCost(const map<TechField::Type, int>& techLevels, int shipSize, float costPerPower);
-	float getSize(const map<TechField::Type, int>& techLevels, int shipSize);
-	float getActualSize(const map<TechField::Type, int>& techLevels, int shipSize, float spacePerPower);
+	float getCost(map<TechField::Type, int>& techLevels, int shipSize);
+	float getActualCost(map<TechField::Type, int>& techLevels, int shipSize, float costPerPower);
+	float getSize(map<TechField::Type, int>& techLevels, int shipSize);
+	float getActualSize(map<TechField::Type, int>& techLevels, int shipSize, float spacePerPower);
 	float getPower(int shipSize);
 	int getMinDamage();
 	int getMaxDamage();

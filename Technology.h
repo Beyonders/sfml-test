@@ -201,7 +201,7 @@ public:
 	};
 
 	int getTechLevel() { return this->techLevel; }
-	TechField::Type getTechField() { return this->techField; }
+	TechField::Type getTechField() { return this->techField; } 
 	string getTechName() { return this->techName; }
 	string getTechSecondaryName() { return this->techSecondaryName; }
 	string getTechDescription() { return this->techDescription; }
