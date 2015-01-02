@@ -83,13 +83,13 @@ float Equipment::getCost(map<TechField::Type, int>& techLevels, int shipSize)
 	return initialCost * (powf(0.5f, (levelDifference / 10.0f)));
 }
 
-float Equipment::getActualCost( map<TechField::Type, int>& techLevels, int shipSize, float costPerPower)
+float Equipment::getActualCost(map<TechField::Type, int>& techLevels, int shipSize, float costPerPower)
 {
 	float cost = this->getCost(techLevels, shipSize);
 	return (cost + this->getPower(shipSize) * costPerPower);
 }
 
-float Equipment::getSize( map<TechField::Type, int>& techLevels, int shipSize)
+float Equipment::getSize(map<TechField::Type, int>& techLevels, int shipSize)
 {
 	float initialSize = 0;
 	if (this->technology->getGenericSize() == 0) //It uses the ship-specific size cost
@@ -151,7 +151,7 @@ float Equipment::getSize( map<TechField::Type, int>& techLevels, int shipSize)
 	return initialSize * (powf(0.75f, (levelDifference / 10.0f)));
 }
 
-float Equipment::getActualSize( map<TechField::Type, int>& techLevels, int shipSize, float spacePerPower)
+float Equipment::getActualSize(map<TechField::Type, int>& techLevels, int shipSize, float spacePerPower)
 {
 	float size = this->getSize(techLevels, shipSize);
 	return (size + this->getPower(shipSize) * spacePerPower);

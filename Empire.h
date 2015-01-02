@@ -9,6 +9,7 @@ private:
 	string empireName;
 
 public:
+	TechnologyManager* getTechnologyManager() { return NULL; }
 
 };
 
